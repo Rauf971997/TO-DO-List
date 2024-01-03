@@ -169,6 +169,24 @@ button::before {
   color:#000;
 }
 
+#taskList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+
+#taskList li {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 15px;
+  margin-top: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
 
 
 
