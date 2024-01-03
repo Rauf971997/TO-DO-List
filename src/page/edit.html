@@ -1,18 +1,30 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <title>Edit Task</title>
-</head>
-<body>
-  <div class="edit-container">
-    <!-- Your form for editing task data -->
-    <form id="editForm" action="#">
-      <!-- Form fields to edit task data -->
-      <label for="taskName">Task Name:</label>
-      <input type="text" id="taskName" name="taskName">
-      <!-- Other fields -->
-      <input type="submit" value="Submit">
-    </form>
-  </div>
-</body>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To-Do List</title>
+    <link rel="stylesheet" href="../../style.css">
+    <script src="../../index.js" defer></script>
+  </head>
+  
+  <body>
+    <div class="todo-container">
+      <header>
+        <h1>Edit Page</h1>
+      </header>
+      <main>
+        <div id="formContainer" class="form-container">
+          <form id="taskForm" class="task-form">
+            <input type="text" id="taskTitle" placeholder="Edit Task Title" required />
+            <textarea id="taskDescription" placeholder="Edit Task Description" required></textarea>
+            <button type="submit" class="add">Edit Task</button>
+            <button type="button" class="toHome" >Go to Home Page</button>
+          </form>
+        </div>
+       
+      </main>
+    </div>
+  </body>
 </html>
