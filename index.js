@@ -137,10 +137,10 @@ class TaskList{
 
 }
 
-const TaskList = new TaskList();
+const myTaskList = new TaskList();
 
 // Event listene for Add Button 
-addBtn.addEventListener("click", TaskList.addTodo);
+addBtn.addEventListener("click", myTaskList.addTodo);
 
 // Event listener for TaskLIst
 taskList.addEventListener("click", (e) => {
