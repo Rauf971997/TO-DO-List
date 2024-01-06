@@ -131,3 +131,4 @@ class TaskList{
 
 }
 
+const TaskList = new TaskList();
