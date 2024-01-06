@@ -171,3 +171,29 @@ taskList.addEventListener("click", (e) => {
 
 
 //   Filter Method 
+filterButtons.forEach((button) => {
+    button.addEventListener("click", function () {
+      const buttonText = this.textContent.toLowerCase();
+      const tasks = Array.from(taskList.children);
+  
+      tasks.forEach((task) => {
+        switch (buttonText) {
+          case "all":
+            task.style.display = "flex";
+            break;
+          case "completed":
+            task.style.display = task.classList.contains("completed")
+              ? "flex"
+              : "none";
+            break;
+          case "uncompleted":
+            task.style.display = !task.classList.contains("completed")
+              ? "flex"
+              : "none";
+            break;
+          default:
+            break;
+        }
+      });
+    });
+  });
