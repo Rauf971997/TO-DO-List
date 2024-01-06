@@ -7,6 +7,11 @@ const filterButtons = document.querySelectorAll(".filter-btns button");
 
 
 class Task{
+    #id;
+    #title;
+    #description;
+    #createDate;
+    #isCompleted;
     constructor(){};
 }
 
