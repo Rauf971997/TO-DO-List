@@ -6,6 +6,7 @@ const taskList = document.querySelector("#taskList");
 const filterButtons = document.querySelectorAll(".filter-btns button");
 
 
+// Class Task
 class Task{
     #id;
     #title;
@@ -65,5 +66,13 @@ class Task{
 class TaskList{
     #allTasks=[];
    constructor(){};  
+
+   //Validation Form 
+   validationForm(title, description) {
+    const titleRegex = /^(?!\s)(?![\d\s]+$)([a-zA-Z]{1,16}|[а-яА-Я]{1,16}|\d{1,16})(\s([a-zA-Z]{1,16}|[а-яА-Я]{1,16}|\d{1,16})){1,15}(?<!\s)$/u;
+    const descriptionRegex = /^(?!\s+$)([a-zA-Z]{1,16}|[а-яА-Я]{1,16}|\d{1,16})(\s([a-zA-Z]{1,16}|[а-яА-Я]{1,16}|\d{1,16})){0,15}\s*$/u;
+    return titleRegex.test(title) && descriptionRegex.test(description) && description.trim() !== title.trim();
+  }
+
 }
 
