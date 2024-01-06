@@ -98,7 +98,8 @@ class TaskList{
       newTodo.appendChild(todoLink);
       todoDiv.appendChild(newTodo);
 
-  
+      /// Add todo TO LOCALSTORAGE
+      saveTodo(taskTitle.value);
 
       // Check mark button
       const completedButton = document.createElement("button");
