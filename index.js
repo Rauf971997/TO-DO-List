@@ -135,3 +135,33 @@ const TaskList = new TaskList();
 
 // Event listene for Add Button 
 addBtn.addEventListener("click", task.addTodo);
+
+// Event listener for TaskLIst
+taskList.addEventListener("click", (e) => {
+    const item = e.target;
+    
+    //  Delete ToDO
+    if (item.classList.contains("trash-btn")) {
+      const todo = item.parentElement;
+      removeLocalTodos(todo);
+      todo.remove();
+    }
+  
+    // Check Mark
+    if (item.classList.contains("complete-btn")) {
+      const todo = item.parentElement;
+      const isCompleted = todo.classList.contains("completed");
+      
+      if (!isCompleted) {
+        todo.classList.add("completed"); 
+        console.log(`Status changed to Completed`);
+      } else {
+       
+        todo.classList.remove("completed"); 
+        console.log(`Status changed to UnCompleted`);
+      }
+    }
+  
+    // Edit buttons
+    
+  });
