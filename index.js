@@ -35,5 +35,24 @@ class TaskList{
         return `${day}/${month}/${year} ${hours}:${minutes}:${seconds}`;
       }
     
+      getId() {
+        return this.#id;
+      }
+    
+      getTitle() {
+        return this.#title;
+      }
+    
+      getDescription() {
+        return this.#description;
+      }
+    
+      getCreateDate() {
+        return this.#createDate;
+      }
+    
+      getIsCompleted() {
+        return this.#isCompleted;
+      }
 }
 
