@@ -77,7 +77,9 @@ class TaskList{
   //Validation form end
 
   addTodo = (e) => {
-    
+ 
+      e.preventDefault();
+
     const taskTitleValue = taskTitle.value;
     const taskDescriptionValue = taskDescription.value;
 
@@ -163,5 +165,9 @@ taskList.addEventListener("click", (e) => {
     }
   
     // Edit buttons
-    
+
   });
+
+
+
+//   Filter Method 
