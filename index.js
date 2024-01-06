@@ -6,6 +6,9 @@ const taskList = document.querySelector("#taskList");
 const filterButtons = document.querySelectorAll(".filter-btns button");
 
 
+// Event Listeners
+document.addEventListener('DOMContentLoaded',getTodos);
+
 // Class Task
 class Task{
     #id;
