@@ -16,6 +16,12 @@ class Task{
 }
 
 class TaskList{
-    constructor(){};
+    constructor(title, description) {
+        this.#id = Math.random().toString(16).slice(2);
+        this.#title = title;
+        this.#description = description;
+        this.#createDate = createDate;
+        this.#isCompleted = false;
+      }
 }
 
