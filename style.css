@@ -245,3 +245,10 @@ button::before {
   font-size: 17px;
   cursor: pointer;
 }
+
+
+.completed {
+  text-decoration: line-through;
+  opacity: 0.6; 
+  transition: opacity 0.3s ease-in-out; 
+}
