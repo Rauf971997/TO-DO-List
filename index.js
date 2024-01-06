@@ -54,5 +54,13 @@ class TaskList{
       getIsCompleted() {
         return this.#isCompleted;
       }
+
+      markAsCompleted() {
+        this.#isCompleted = true;
+      }
+    
+     markAsUncompleted(){
+        this.#isCompleted = false;
+      }
 }
 
