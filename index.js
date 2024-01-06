@@ -212,3 +212,50 @@ function saveTodo(todo){
     todos.push(todo);
     localStorage.setItem("todos",JSON.stringify(todos));
   }
+
+
+// Function get Todo for Local Storage  
+  function getTodos(){
+    let todos;
+    if(localStorage.getItem("todos") === null){
+      todos = [];
+    }else{
+      todos = JSON.parse(localStorage.getItem("todos"));
+    }
+  
+    todos.forEach(function(todo){
+      const todoDiv = document.createElement("div");
+      todoDiv.classList.add("todo");
+     
+  
+      // Create LI with a link
+      const newTodo = document.createElement("li");
+      const todoLink = document.createElement("a");
+      todoLink.href = `src/page/details.html?id=${encodeURIComponent(task.getId())}`;
+      todoLink.textContent = todo; 
+      newTodo.classList.add("todo-item");
+      newTodo.appendChild(todoLink);
+      todoDiv.appendChild(newTodo);
+  
+      // Check mark button
+      const completedButton = document.createElement("button");
+      completedButton.innerHTML = '<i class="fas fa-check"></i>';
+      completedButton.classList.add("complete-btn");
+      todoDiv.appendChild(completedButton);
+  
+      // Check Trash Button
+      const trashButton = document.createElement("button");
+      trashButton.innerHTML = '<i class="fas fa-trash"></i>';
+      trashButton.classList.add("trash-btn");
+      todoDiv.appendChild(trashButton);
+  
+      // Edit Button
+      const editBtn = document.createElement("button");
+      editBtn.innerHTML = '<i class="fas fa-edit"></i>';
+      editBtn.classList.add("edit-btn");
+      todoDiv.appendChild(editBtn);
+    
+      // Append to list
+      taskList.appendChild(todoDiv);
+    });
+  }
