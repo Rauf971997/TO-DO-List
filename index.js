@@ -73,8 +73,8 @@ class TaskList{
 
    //Validation Form 
    validationForm(title, description) {
-    const titleRegex = /^(?!\s)(?![\d\s]+$)([a-zA-Z]{1,16}|[а-яА-Я]{1,16}|\d{1,16})(\s([a-zA-Z]{1,16}|[а-яА-Я]{1,16}|\d{1,16})){1,15}(?<!\s)$/u;
-    const descriptionRegex = /^(?!\s+$)([a-zA-Z]{1,16}|[а-яА-Я]{1,16}|\d{1,16})(\s([a-zA-Z]{1,16}|[а-яА-Я]{1,16}|\d{1,16})){0,15}\s*$/u;
+    const titleRegex = /^(?!\s)(?![\d\s]+$)([a-zA-Z]{1,16}|[а-яА-ЯёЁ]{1,16}|\d{1,16})(\s([a-zA-Z]{1,16}|[а-яА-ЯёЁ]{1,16}|\d{1,16})){1,15}(?<!\s)$/u;
+    const descriptionRegex = /^(?!\s+$)([a-zA-Z]{1,16}|[а-яА-ЯёЁ]{1,16}|\d{1,16})(\s([a-zA-Z]{1,16}|[а-яА-ЯёЁ]{1,16}|\d{1,16})){0,15}\s*$/u;
     return titleRegex.test(title) && descriptionRegex.test(description) && description.trim() !== title.trim();
   }
   //Validation form end
@@ -141,6 +141,7 @@ const myTaskList = new TaskList();
 
 // Event listene for Add Button 
 addBtn.addEventListener("click", myTaskList.addTodo);
+
 
 // Event listener for TaskLIst
 taskList.addEventListener("click", (e) => {
