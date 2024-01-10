@@ -4,7 +4,7 @@ document.querySelector(".toHome").addEventListener("click", function() {
   
   document.addEventListener('DOMContentLoaded', () => {
     const urlParams = new URLSearchParams(window.location.search);
-    const taskId = urlParams.get('id'); ge
+    const taskId = urlParams.get('id'); 
     const storedData = localStorage.getItem('todos');
     const todos = JSON.parse(storedData) || []; 
   
