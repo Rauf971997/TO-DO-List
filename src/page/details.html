@@ -1,31 +1,27 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Task Details</title>
+  <link rel="stylesheet" href="../../style.css">
+  <script src="../js/details.js" defer></script>
 </head>
 <body>
-  <h1>Task Details</h1>
-  
-  <div>
-    <h2>Task ID:</h2>
-    <p id="taskID"></p>
-  </div>
+  <div class="todo-container-details">
+   <h1>Task Details</h1>
+   <div class="task-details-container">
+     <p class="details">Task Id: <span id="taskId"></span></p>
+     <p class="details">Title: <span id="taskTitle"></span></p>
+     <p class="details">Description: <span id="taskDescription"></span></p>
+     <p class="details">Created Date: <span id="taskCreateDate"></span></p>
+     <p class="details">Status: <span id="taskStatus"></span></p>
+   </div>
+  </div >
 
-
-  <div>
-    <h2>Title:</h2>
-    <p id="taskTitle"></p>
-  </div>
-  
-  <div>
-    <h2>Description:</h2>
-    <p id="taskDescription"></p>
+  <div class="details-button-container">
+     <button type="button" class="toHome">Go Home</button>
   </div>
   
-  <div>
-    <h2>Created Date:</h2>
-    <p id="taskCreateDate"></p>
-  </div>
-
 </body>
 </html>
