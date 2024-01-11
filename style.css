@@ -1,6 +1,6 @@
 /*My Body Style Start*/
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -8,6 +8,8 @@ body {
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
+  backdrop-filter: blur(10px);
+  height: 100vh;
 }
 
 /*My Body Style End*/
@@ -15,21 +17,163 @@ body {
 .todo-container {
   max-width: 700px;
   margin: 20px auto;
-  border: 3px solid rgba(215, 255, 255, 0.5);
   border-radius: 16px;
   padding: 20px;
   color: #fff;
-  background:  url("./src/img/background.jpg");
   background-position: cover;
   background-attachment: fixed;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
+  position: relative;
+  overflow: hidden;
+  border: 3px solid transparent;
+  animation: borderChange 6s infinite linear;
+  transition: box-shadow 0.3s ease;
+}
+
+.todo-container:hover {
+  box-shadow: 0 0 30px rgba(100, 149, 237, 0.8);
+}
+
+@keyframes borderChange {
+  0% {
+    border-image: linear-gradient(
+      90deg,
+      #ff6b6b,
+      #48dbfb,
+      #1dd1a1,
+      #feca57,
+      #5f27cd,
+      #ff9f43
+    );
+    border-image-slice: 1;
+  }
+  10% {
+    border-image: linear-gradient(
+      90deg,
+      #ff9f43,
+      #ff6b6b,
+      #48dbfb,
+      #1dd1a1,
+      #feca57,
+      #5f27cd
+    );
+    border-image-slice: 2;
+  }
+  20% {
+    border-image: linear-gradient(
+      90deg,
+      #5f27cd,
+      #ff9f43,
+      #ff6b6b,
+      #48dbfb,
+      #1dd1a1,
+      #feca57
+    );
+    border-image-slice: 3;
+  }
+  30% {
+    border-image: linear-gradient(
+      90deg,
+      #feca57,
+      #5f27cd,
+      #ff9f43,
+      #ff6b6b,
+      #48dbfb,
+      #1dd1a1
+    );
+    border-image-slice: 4;
+  }
+  40% {
+    border-image: linear-gradient(
+      90deg,
+      #1dd1a1,
+      #feca57,
+      #5f27cd,
+      #ff9f43,
+      #ff6b6b,
+      #48dbfb
+    );
+    border-image-slice: 5;
+  }
+  50% {
+    border-image: linear-gradient(
+      90deg,
+      #48dbfb,
+      #1dd1a1,
+      #feca57,
+      #5f27cd,
+      #ff9f43,
+      #ff6b6b
+    );
+    border-image-slice: 6;
+  }
+  60% {
+    border-image: linear-gradient(
+      90deg,
+      #ff6b6b,
+      #48dbfb,
+      #1dd1a1,
+      #feca57,
+      #5f27cd,
+      #ff9f43
+    );
+    border-image-slice: 7;
+  }
+  70% {
+    border-image: linear-gradient(
+      90deg,
+      #ff9f43,
+      #ff6b6b,
+      #48dbfb,
+      #1dd1a1,
+      #feca57,
+      #5f27cd
+    );
+    border-image-slice: 8;
+  }
+  80% {
+    border-image: linear-gradient(
+      90deg,
+      #5f27cd,
+      #ff9f43,
+      #ff6b6b,
+      #48dbfb,
+      #1dd1a1,
+      #feca57
+    );
+    border-image-slice: 9;
+  }
+  90% {
+    border-image: linear-gradient(
+      90deg,
+      #feca57,
+      #5f27cd,
+      #ff9f43,
+      #ff6b6b,
+      #48dbfb,
+      #1dd1a1
+    );
+    border-image-slice: 10;
+  }
+  100% {
+    border-image: linear-gradient(
+      90deg,
+      #1dd1a1,
+      #feca57,
+      #5f27cd,
+      #ff9f43,
+      #ff6b6b,
+      #48dbfb
+    );
+    border-image-slice: 11;
+  }
 }
 
 h1 {
   text-align: center;
   margin-bottom: 20px;
   font-weight: 700;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   text-shadow: 0 0 12px rgba(255, 255, 255, 0.9);
 }
 
@@ -44,7 +188,6 @@ h1 {
   flex-direction: column;
 }
 
-
 input[type="text"] {
   width: 96%;
   margin-bottom: 15px;
@@ -58,8 +201,6 @@ input[type="text"] {
   cursor: pointer;
 }
 
-
-
 textarea {
   width: 96%;
   margin-bottom: 15px;
@@ -67,25 +208,22 @@ textarea {
   border-radius: 8px;
   font-size: 17px;
   color: #fff;
-  resize: none; 
+  resize: none;
   background: rgb(255, 255, 255, 0.4);
   border: 2px solid rgba(255, 255, 255, 0.2);
   cursor: pointer;
 }
 
-
 input[type="text"]:hover,
 textarea:hover {
-  border-color:#f0f0f0; 
+  border-color: #f0f0f0;
 }
-
 
 input[type="text"]:focus,
 textarea:focus {
   outline: none;
-  border-color:#f0f0f0;
+  border-color: #f0f0f0;
 }
-
 
 input[type="text"]::placeholder,
 textarea::placeholder {
@@ -109,27 +247,23 @@ textarea::placeholder {
   overflow: hidden;
 }
 
-
 .add::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 50%;
   left: 50%;
   width: 300%;
   height: 300%;
-  background: rgba(255, 255, 255, 0.3); 
+  background: rgba(255, 255, 255, 0.3);
   transition: transform 0.6s ease-out;
   border-radius: 50%;
   z-index: 0;
   transform: translate(-50%, -50%) scale(0);
 }
 
-
-
 .add:active {
-  transform: scale(0.95); 
+  transform: scale(0.95);
 }
-
 
 button {
   color: #fff;
@@ -140,15 +274,13 @@ button {
   font-size: 16px;
   outline: none;
   background: rgb(255, 150, 255, 0.3);
-  border-color:#f0f0f0;
+  border-color: #f0f0f0;
   color: white;
   transition: box-shadow 0.3s ease;
   font-weight: 700;
 }
 
-
-
-#changeStatusButton{
+#changeStatusButton {
   color: #fff;
   border: 2px solid;
   padding: 12px 24px;
@@ -159,14 +291,13 @@ button {
   background-color: red;
   width: 200px;
   text-align: center;
-  border-color:#f0f0f0;
+  border-color: #f0f0f0;
   color: white;
 }
 
 button:hover {
   box-shadow: 0 0 25px 5px rgba(25, 25, 255, 0.5);
 }
-
 
 /* My Sort Section SOrt Button Start */
 .sort-section {
@@ -178,7 +309,6 @@ button:hover {
 .sort-section label {
   font-size: 18px;
   margin-right: 12px;
-  
 }
 
 .sort-section select {
@@ -191,11 +321,10 @@ button:hover {
   outline: none;
 }
 
-.sort-section select:hover{
-  background-color: #f0f0f0; 
-  color: #000; 
-  }
-
+.sort-section select:hover {
+  background-color: #f0f0f0;
+  color: #000;
+}
 
 /* Filter Buttons */
 .filter-btns {
@@ -218,14 +347,14 @@ button:hover {
 }
 
 .filter-btns button:hover {
-  background-color: #ccc; 
+  background-color: #ccc;
+  color: #000;
 }
 
 .filter-btns button:focus {
-  background-color: #f0f0f0; 
-  color: #333;
+  background-color: #f0f0f0;
+  color: #000;
 }
-
 
 /* To do container */
 .todo-list-container {
@@ -240,7 +369,7 @@ button:hover {
 
 /* To-Do List Items */
 .todo {
-  background:rgb(255, 255, 255, 0.3);
+  background: rgb(255, 255, 255, 0.3);
   border-radius: 8px;
   margin-bottom: 10px;
   padding: 15px;
@@ -250,6 +379,7 @@ button:hover {
   align-items: center;
   transition: transform 0.3s ease-in-out;
   border: 1px solid rgba(255, 255, 255, 0.2);
+  animation: borderChange 3s infinite linear;
 }
 
 .todo-item {
@@ -259,26 +389,22 @@ button:hover {
   margin-right: 15px;
 }
 
-
-
 /* My edit */
-.edi-btn{
+.edi-btn {
   display: flex;
   justify-content: center;
   align-items: center;
   margin-bottom: 15px;
-  
 }
 
-
-.stat{
+.stat {
   margin-right: 8px;
   font-weight: bold;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: 20px;
 }
 
-#editTaskButton{
+#editTaskButton {
   color: #fff;
   border: none;
   padding: 12px 24px;
@@ -294,18 +420,16 @@ button:hover {
   width: 200px;
 }
 
-
-#editTaskButton:hover{
+#editTaskButton:hover {
   box-shadow: 0 0 25px 5px rgba(25, 25, 255, 0.5);
 }
 
-.save{
+.save {
   display: flex;
   justify-content: center;
 }
 
 /* My edit */
-
 
 /* Buttons */
 .todo button {
@@ -314,66 +438,55 @@ button:hover {
   padding: 8px 12px;
   border-radius: 5px;
   transition: background-color 0.3s ease, color 0.3s ease;
-  margin-right: 5px; 
+  margin-right: 5px;
 }
 
-#changeStatusButton{
+#changeStatusButton {
   border: none;
   cursor: pointer;
   padding: 8px 12px;
   border-radius: 5px;
   transition: background-color 0.3s ease, color 0.3s ease;
-  margin-right: 5px; 
+  margin-right: 5px;
   background-color: red;
   width: 40px;
 }
-
 
 .complete-btn {
   background-color: red;
 }
 
-
-
 .trash-btn {
   background-color: rgba(255, 255, 0, 0.751);
-  
 }
 
 .edit-btn {
   background-color: #007bff;
 }
 
-
 .todo-item a {
   text-decoration: none;
-  color: white; 
+  color: white;
   font-weight: bold;
-  transition: color 0.3s ease-in-out; 
+  transition: color 0.3s ease-in-out;
   font-size: 17px;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: 500;
 }
 
-
 .todo-item a:hover {
-  text-decoration: dotted; 
+  text-decoration: dotted;
   text-decoration-color: white;
   text-decoration-line: underline;
   cursor: pointer;
 }
 
-
 .completed {
   text-decoration: line-through;
-  text-decoration-thickness: 3px; 
-  opacity: 0.6; 
-  transition: opacity 0.4s ease-in-out; 
+  text-decoration-thickness: 3px;
+  opacity: 0.6;
+  transition: opacity 0.4s ease-in-out;
 }
-
-
-
-
 
 /* Details page style */
 .todo-container-details {
@@ -383,16 +496,17 @@ button:hover {
   border-radius: 16px;
   padding: 20px;
   color: #fff;
-  background:  url("./src/img/background.jpg");
+  /* background:  url("./src/img/background.jpg"); */
   background-position: cover;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
+  animation: borderChange 7s infinite linear;
 }
 
 .details-button-container {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 20px; 
+  margin-top: 20px; /* Добавлен верхний отступ для размещения кнопки Go to Home Page */
 }
 
 .toHome {
@@ -406,33 +520,31 @@ button:hover {
 }
 
 .toHome:hover {
-  background-color: rgba(138, 43, 226, 0.8); 
+  background-color: rgba(138, 43, 226, 0.8); /* Изменение цвета при наведении */
 }
 
 span {
   color: white;
   font-weight: bold;
   font-size: 16px;
-   margin-left: 10px;
+  /* font-family: 'Poppins', sans-serif; */
+  margin-left: 10px;
 }
 
 .details {
-   font-size: 19px;
-    font-weight: 700;
-    font-family: 'Poppins', sans-serif;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
+  font-size: 19px;
+  font-weight: 700;
+  font-family: "Poppins", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+p {
+  text-shadow: 0 0 12px rgba(255, 255, 255, 0.9);
 }
 
-
-p{
-  text-shadow: 0 0 12px rgba(255, 255, 255, 0.9);
-} 
-
-
-.edit-button-container{
+.edit-button-container {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 20px; 
+  margin-top: 20px;
 }
