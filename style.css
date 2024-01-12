@@ -245,6 +245,7 @@ input[type="text"] {
   border: 2px solid rgba(255, 255, 255, 0.2);
   color: #fff;
   cursor: pointer;
+font-family: 'Times New Roman', Times, serif;
 }
 
 textarea {
@@ -258,6 +259,7 @@ textarea {
   background: rgb(255, 255, 255, 0.4);
   border: 2px solid rgba(255, 255, 255, 0.2);
   cursor: pointer;
+  font-family: 'Times New Roman', Times, serif;
 }
 
 input[type="text"]:hover,
