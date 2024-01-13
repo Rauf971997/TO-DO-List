@@ -338,6 +338,11 @@ function updateTasks(sortBy = 'default', filter = 'all') {
     todos.sort((a, b) => new Date(b.createDate) - new Date(a.createDate));
   }
 
+  
+  if (sortBy === 'date') {
+    todos.reverse();
+  }
+
   const taskList = document.getElementById('taskList');
   taskList.innerHTML = "";
 
@@ -405,7 +410,7 @@ document.addEventListener('DOMContentLoaded', () => {
       this.classList.add('active');
 
       const filter = this.textContent.toLowerCase();
-      sortSelect.value ="default"; 
+      sortSelect.value;
       updateTasks( sortSelect.value, filter);   
     });
   });
