@@ -12,7 +12,6 @@ body {
   height: 100vh;
 }
 
-/*My Body Style End*/
 
 header {
   display: flex;
@@ -33,8 +32,6 @@ header img {
   border-radius: 16px;
   padding: 20px;
   color: #fff;
-  background-position: cover;
-  background-attachment: fixed;
   font-family: "Poppins", sans-serif;
   position: relative;
   overflow: hidden;
@@ -347,7 +344,7 @@ button:hover {
   box-shadow: 0 0 25px 5px rgba(25, 25, 255, 0.5);
 }
 
-/* My Sort Section SOrt Button Start */
+
 .sort-section {
   margin-top: 20px;
   display: flex;
@@ -374,7 +371,7 @@ button:hover {
   color: #000;
 }
 
-/* Filter Buttons */
+
 .filter-btns {
   margin-top: 20px;
   display: flex;
@@ -404,7 +401,7 @@ button:hover {
   color: #000;
 }
 
-/* To do container */
+
 .todo-list-container {
   margin-top: 20px;
   padding: 0;
@@ -415,7 +412,7 @@ button:hover {
   padding: 0;
 }
 
-/* To-Do List Items */
+
 .todo {
   background: rgb(255, 255, 255, 0.3);
   border-radius: 8px;
@@ -437,7 +434,7 @@ button:hover {
   margin-right: 15px;
 }
 
-/* My edit */
+
 .edi-btn {
   display: flex;
   justify-content: center;
@@ -477,9 +474,7 @@ button:hover {
   justify-content: center;
 }
 
-/* My edit */
 
-/* Buttons */
 .todo button {
   border: none;
   cursor: pointer;
@@ -536,7 +531,7 @@ button:hover {
   transition: opacity 0.4s ease-in-out;
 }
 
-/* Details page style */
+
 .todo-container-details {
   max-width: 700px;
   margin: 20px auto;
@@ -544,7 +539,6 @@ button:hover {
   border-radius: 16px;
   padding: 20px;
   color: #fff;
-  /* background:  url("./src/img/background.jpg"); */
   background-position: cover;
   font-family: "Poppins", sans-serif;
   animation: borderChange 7s infinite linear;
@@ -554,7 +548,7 @@ button:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 20px; /* Добавлен верхний отступ для размещения кнопки Go to Home Page */
+  margin-top: 20px; 
 }
 
 .toHome {
@@ -568,14 +562,13 @@ button:hover {
 }
 
 .toHome:hover {
-  background-color: rgba(138, 43, 226, 0.8); /* Изменение цвета при наведении */
+  background-color: rgba(138, 43, 226, 0.8); 
 }
 
 span {
   color: white;
   font-weight: bold;
   font-size: 16px;
-  /* font-family: 'Poppins', sans-serif; */
   margin-left: 10px;
 }
 
