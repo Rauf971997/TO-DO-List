@@ -139,8 +139,6 @@ class TaskList {
     else {
       alert('Incorrect task name. Please follow the entry rules!');
     }
-
-    console.log(task.getTasks());
   
   };
 
